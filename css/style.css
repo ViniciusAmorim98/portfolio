@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Sheppards&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    /* background-image: url(../img/luz-1.png); */
+    /* background-repeat: no-repeat; */
+    color: white;
+    background-image: url(../img/luz-1.png);
+    background-repeat: no-repeat;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to top, #e040ef, #23abf5);
+}
+
+.container-principal {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.titulo {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.titulo span {
+    background-image: linear-gradient(to right, #e040ef, #23abf5);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+
+
+#barra-top {
+    height: 5px;
+    background: linear-gradient(to right, #e040ef, #23abf5);
+}
+
+nav {
+    height: 50px;
+    /* border: solid 1px #23abf5; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid 2px white; */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 10px 0 10px;
+    font-size: 12px;
+}
+
+nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid #23abf5;
+    padding-bottom: 10px;
+    border-image: linear-gradient(to right, #e040ef, #23abf5) 1;
+}
+
+.logo {
+    font-family: 'mrs sheppards';
+    color: white;
+    font-size: 25px;
+
+
+}
+
+
+#btn-contato-1 a {
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(to right, #e040ef, #23abf5);
+    padding: 5px 15px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+#btn-contato-1 a:hover {
+    transform: scale(1.09);
+    box-shadow: 0 0 20px #23abf5;
+}
+
+
+/*
+apresentação-------------------*/
+#apresentacao {
+    height: 400px;
+    /* border: white solid 1px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#apresentacao-linha-1 {
+    font-size: 60px;
+    font-weight: lighter;
+    margin: 0;
+}
+
+#apresentacao-linha-2 {
+    font-size: 65px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #e040ef, #23abf5);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    margin-top: -25px;
+}
+
+#apresentacao-linha-3 {
+    font-size: 25px;
+    position: relative;
+}
+
+#apresentacao-linha-3::before {
+    content: "";
+    animation: digitando 30s infinite;
+}
+
+#apresentacao-linha-3::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid white;
+    right: -10px;
+    animation: cursor .8s infinite, digita 30s steps(15) infinite;
+    width: calc(100% + 12px);
+    background-color: black;
+}
+
+#apresentacao #apresentacao-text a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    border: 1px #23abf5 solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+#apresentacao #apresentacao-text a:hover {
+    background: linear-gradient(to right, #e040ef, #23abf5);
+    border: none;
+    transform: scale(1.09);
+    box-shadow: 0 0 20px #23abf5;
+    font-weight: 500;
+}
+
+
+
+#apresentacao-img img {
+    width: 350px;
+    position: relative;
+    animation-name: flutuar;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#apresentacao-text {
+    animation-name: animacao-apre-text;
+    animation-duration: 2s;
+}
+
+#apresentacao-img {
+    animation-name: animacao-apre-ft;
+    animation-duration: 2s;
+}
+
+/*
+minhas especialidades---------------------*/
+.especialidades {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.especialidades-box {
+    padding: 40px;
+    /* border: so   lid 1px #23abf5; */
+    margin-top: 40px;
+    border-radius: 20px;
+    transition: .2s;
+    background-color: rgb(15, 15, 15);
+}
+
+.especialidades-box:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #23acf5;
+
+}
+
+.especialidades-box i {
+    background-image: linear-gradient(to right, #e040ef, #23abf5);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-size: 70px;
+}
+
+.especialidades-box h3 {
+    margin: 15px 0;
+}
+
+.especialidades-box p {
+    font-size: 14px;
+
+}
+
+/*
+sobre mim------------------------------*/
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.txt-sobre h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.txt-sobre h2 span {
+    display: block;
+    background-image: linear-gradient(to right, #e040ef, #23abf5);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 500;
+
+}
+
+.txt-sobre p {
+    text-align: justify;
+}
+
+.txt-sobre .btn-social a button i {
+    width: 50px;
+}
+
+.txt-sobre .btn-social button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 25px;
+    background: linear-gradient(to right, #e040ef, #23abf5);
+    color: white;
+    transition: .2s;
+    margin: 0 10px 0 10px;
+
+}
+
+.txt-sobre .btn-social button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #23acf5;
+}
+
+/*
+animações---------------------------------------*/
+
+@keyframes animacao-apre-text {
+
+    0% {
+        position: relative;
+        left: -500px;
+    }
+
+    100% {
+        position: relative;
+        left: 0;
+    }
+
+}
+
+@keyframes animacao-apre-ft {
+    0% {
+        position: relative;
+        right: -500px;
+    }
+
+    100% {
+        position: relative;
+        right: 0;
+    }
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+@keyframes digitando {
+
+    0%,
+    20% {
+        content: "< / Desenvolvedor Front-End >";
+    }
+
+    21%,
+    40% {
+        content: "< / Desenvolvedor Front-End >";
+    }
+
+    41%,
+    60% {
+        content: "< / Desenvolvedor Front-End >";
+    }
+
+    61%,
+    80% {
+        content: "< / Desenvolvedor Front-End >";
+    }
+
+    81%,
+    100% {
+        content: "< / Desenvolvedor Front-End >";
+    }
+}
+
+@keyframes cursor {
+    0% {
+        border-left: 2px solid black;
+    }
+
+}
+
+@keyframes digita {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 12px);
+    }
+}
